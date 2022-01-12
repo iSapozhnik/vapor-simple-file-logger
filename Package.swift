@@ -10,6 +10,8 @@ let package = Package(
         .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0")
     ],
     targets: [
-        .target(name: "SimpleFileLogger", dependencies: ["Vapor"])
+        .target(name: "SimpleFileLogger", dependencies: [
+            .product(name: "Vapor", package: "vapor") 
+        ])
     ]
 )
